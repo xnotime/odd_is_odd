@@ -23,6 +23,9 @@
 
 #![forbid(unsafe_code)]
 
+#[cfg(not(debug_assertions))]
+compile_error!("repeat after me: do not deploy anything with this awful library");
+
 use std::hint::black_box;
 
 /// Checks if an `i8` is odd. Read the crate docs. 
