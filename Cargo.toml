@@ -7,7 +7,6 @@ edition = "2021"
 
 description = "A very (not) safe library to check if a number is odd. Based on cve-rs. "
 license = "Unlicense"
-license-file = "LICENSE"
 repository = "https://github.com/residualentropy/odd_is_odd"
 
 [dependencies]
