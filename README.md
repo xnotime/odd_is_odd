@@ -1,6 +1,6 @@
 A very (not) safe library to check if a number is odd. 
 Abuses the same bugs and tricks in cve-rs to transmute
-the given `i8`` to a `bool` without using `unsafe`. 
+the given `i8` to a `bool` without using `unsafe`. 
 
 This relies on a compiler bug, almost certainly doesn't
 work on all platforms, and is possibly the least
