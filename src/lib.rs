@@ -21,6 +21,7 @@
 //! }
 //! ```
 
+#![allow(clippy::needless_doctest_main)] // It's not practical, it just looks nice
 #![forbid(unsafe_code)]
 
 #[cfg(not(debug_assertions))]
@@ -35,6 +36,7 @@ pub fn is_odd(number: i8) -> bool {
 }
 
 enum Sneaky<S, T> {
+    #[allow(dead_code)]
     From(Option<Box<S>>),
     To(Option<Box<T>>),
 }
@@ -63,6 +65,7 @@ fn weird<'a, 'b, T>(_witness: &'b &'a (), borrow: &'a mut T) -> &'b mut T {
     borrow
 }
 
+#[allow(clippy::redundant_static_lifetimes)] // Kept for better demonstration
 const FOREVER: &'static &'static () = &&();
 
 fn expand_mut<'a, 'b, T>(borrow: &'a mut T) -> &'b mut T {
